@@ -8,6 +8,7 @@ function cashOut( money ) {
         return "Invalid";
     }
 }
+// console.log(cashOut([2000]))
 
 //problem 2
 
@@ -24,6 +25,7 @@ function  validEmail( email ) {
         }else {return false }
     } else{ return "Invalid"}
 }
+// console.log(validEmail('test@email.com'))
 
 //problem 3
 
@@ -43,6 +45,8 @@ function  electionResult( votes ) {
     } else{ return "Invalid"}
 }
 
+// console.log(electionResult(["mango", "banana", "mango", "banana", "mango"]))
+
 //problem 4
 
 function  isBestFriend( f1 , f2 ) {
@@ -56,5 +60,8 @@ function  isBestFriend( f1 , f2 ) {
         return true;
     } else{ return "Invalid"}
 }
+
+// console.log(isBestFriend( { name: "hashem", roll: 1, bestFriend: 2 },
+//                             { name: "kashem", roll: 2, bestFriend: 1 }  ))
 
 //problem 5
