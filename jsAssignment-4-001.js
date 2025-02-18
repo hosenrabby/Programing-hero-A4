@@ -1,27 +1,25 @@
 //  problem 1
 
 function cashOut( money ) {
-    if (money > 0 && typeof(money) === "number") {
+    if (money > 0 && typeof money === "number") {
         const cashOutChrg = money * 1.75 / 100;
         return cashOutChrg;
     } else{
         return "Invalid";
     }
 }
-// console.log(cashOut([2000]))
+// console.log(cashOut(2000))
 
 //problem 2
 
 function  validEmail( email ) {
-    if (typeof(email) === "string") {
+    if (typeof email === "string") {
         if ((email.startsWith('.') !== true && email.startsWith('-') !== true && email.startsWith('_') !== true && email.startsWith('@') !== true)) {
-            for (const char of email) {
                 if (email.includes('@') && email.includes(" ") !== true) {
                     if (email.endsWith(".com")) {
                         return true;
                     } else {return false }
                 } else {return false }
-            }
         }else {return false }
     } else{ return "Invalid"}
 }
@@ -34,9 +32,9 @@ function  electionResult( votes ) {
     let banana = null;
     if (Array.isArray(votes)) {
         for (const singleVote of votes) {
-            if (singleVote.includes('mango')) {
+            if (singleVote === 'mango') {
                 mango++
-            } if (singleVote.includes('banana')) {
+            } if (singleVote === 'banana') {
                 banana++
             }
         }
@@ -45,7 +43,7 @@ function  electionResult( votes ) {
     } else{ return "Invalid"}
 }
 
-console.log(electionResult(["banana","banana","mango","mango","banana",]))
+// console.log(electionResult(["mango", "banana", "mango", "banana", "mango"]))
 
 //problem 4
 
@@ -57,7 +55,31 @@ function  isBestFriend( f1 , f2 ) {
     } else{ return "Invalid"}
 }
 
-// console.log(isBestFriend( { name: "hashem", roll: 1, bestFriend: 2 },
-//                             { name: "kashem", roll: 2, bestFriend: 1 }  ))
+// console.log(isBestFriend( { name: "hashem", roll: 1, bestFriend: 22 },
+//                             { name: "kashem", roll: 22, bestFriend: 1 }  ))
 
 //problem 5
+
+function  calculateWatchTime( times ) {
+    let secondCount = null;
+    if (Array.isArray(times)) {
+        for (const sec of times) {
+            if (typeof(sec) === "number") {
+                secondCount += sec;
+            }else{ return "Invalid"}
+        }
+        const totalTime = {}
+        const hours = Math.floor(secondCount / 3600);
+        const remainigSec = secondCount % 3600;
+        const min = Math.floor(remainigSec / 60);
+        const second = remainigSec % 60;
+
+            totalTime.Hour = hours;
+            totalTime.Minute = min;
+            totalTime.Second = second;
+            return totalTime;
+    } else{ return "Invalid"}
+}
+
+
+// console.log(calculateWatchTime([100, 3800, 6050]))
