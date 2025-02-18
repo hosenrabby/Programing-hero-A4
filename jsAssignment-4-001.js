@@ -1,7 +1,7 @@
 //  problem 1
 
 function cashOut( money ) {
-    if (money > 0 && isNaN(money) !== true) {
+    if (money > 0 && typeof(money) === "number") {
         const cashOutChrg = money * 1.75 / 100;
         return cashOutChrg;
     } else{
