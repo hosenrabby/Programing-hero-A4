@@ -45,19 +45,15 @@ function  electionResult( votes ) {
     } else{ return "Invalid"}
 }
 
-// console.log(electionResult(["mango", "banana", "mango", "banana", "mango"]))
+console.log(electionResult(["banana","banana","mango","mango","banana",]))
 
 //problem 4
 
 function  isBestFriend( f1 , f2 ) {
     if (typeof(f1) === "object" && typeof(f2) === "object" && !Array.isArray(f1) && !Array.isArray(f2)) {
-        if (Object.keys(f1).length === 3 && Object.keys(f2).length === 3) {
-            if (f1.roll === f2.bestFriend && f1.bestFriend === f2.roll) {
-                return true
-            } else {return false }
-            return true
-        } else{ return "Invalid"}
-        return true;
+        if (f1.roll === f2.bestFriend && f1.bestFriend === f2.roll) {
+             return true
+         } else {return false }
     } else{ return "Invalid"}
 }
 
